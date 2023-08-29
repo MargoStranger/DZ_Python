@@ -12,13 +12,9 @@ import random
 
 def Max_Count_Berries(bush):
     max_berries = bush[0]
-    for i in range(1, len(bush)-1):
+    for i in range(-1, len(bush)-1):
         if max_berries < bush[i-1] + bush[i] + bush[i+1]:
-            max_berries = bush[i-1] + bush[i] + bush[i+1]
-    if max_berries < bush[-1] + bush[0] + bush[1]:
-        max_berries = bush[-1] + bush[0] + bush[1]
-    if max_berries < bush[-2] + bush[-1] + bush[0]:
-        max_berries = bush[-2] + bush[-1] + bush[0]
+            max_berries = bush[i-1] + bush[i] + bush[i+1] 
     return max_berries
 
 
