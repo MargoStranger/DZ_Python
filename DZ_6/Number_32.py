@@ -5,3 +5,15 @@
 # 33
 # 200
 # Ответ: [2, 3]
+
+import random
+
+array = [random.randint(-50, 50) for i in range(10)]
+
+array_min = int(input("Введите минимальное число: "))
+array_max = int(input("Введите максимальное число: "))
+
+res = [i for i in range(len(array)) if array_max >= array[i] >= array_min]
+
+print(array)
+print(res)
